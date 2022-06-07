@@ -1,0 +1,13 @@
+echo "# DataSet2" >> README.md
+git init
+
+import sweetviz
+import pandas as pd
+
+DataSet = open(r"C:\Users\palom\Downloads\DataSet_Test.csv",)
+dados = pd.read_csv(DataSet, sep=';', low_memory=False )
+
+dados.keys()
+
+relatorio = sweetviz.analyze(dados)
+relatorio.show_html("clientes.html")
